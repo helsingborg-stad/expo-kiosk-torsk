@@ -5,6 +5,10 @@
   --breath-animation: breath 2s alternate infinite;
 }
 
+body {
+  font-family: sans-serif;
+}
+
 @keyframes breath {
   from {
     transform: scale(1);
@@ -117,12 +121,11 @@
     width: 100%;
     flex-direction: column;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 
   &__back-button {
     margin-bottom: 5em;
-    font-family: sans-serif;
     background: #63bfc2;
     padding: 1em 2em;
     border-radius: 2em;
@@ -132,5 +135,26 @@
     animation: drop 0.8s 0.2s forwards;
     opacity: 0;
     cursor: pointer;
+    display: none;
+  }
+
+  &__title {
+    text-align: left;
+    color: white;
+    font-size: 5vw;
+    padding: 0.5em;
+    opacity: 0;
+    animation: drop 0.8s forwards;
+    display: none;
+  }
+}
+
+.info--opened {
+  .info__back-button {
+    display: inline;
+  }
+
+  .info__title {
+    display: block;
   }
 }
