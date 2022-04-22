@@ -46,17 +46,13 @@ body {
 }
 
 .menu {
-  //transition: all 400ms ease-in-out;
   background: white;
   height: 100vh;
   transform: translateY(-100%);
   display: flex;
+  box-shadow: -2px -43px 57px 5px rgb(0 0 0 / 30%);
   svg {
     width: 100%;
-    /* position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%); */
   }
 }
 
@@ -116,7 +112,7 @@ body {
   height: 100vh;
   text-align: center;
 
-  &__body {
+  &__content {
     height: 100%;
     width: 100%;
     flex-direction: column;
@@ -125,6 +121,7 @@ body {
   }
 
   &__back-button {
+    margin-top: 3em;
     margin-bottom: 5em;
     background: #63bfc2;
     padding: 1em 2em;
@@ -147,6 +144,19 @@ body {
     animation: drop 0.8s forwards;
     display: none;
   }
+
+  &__body {
+    font-size: 1.1vw;
+    color: white;
+    text-align: left;
+    max-width: 40vw;
+    margin: auto;
+    font-weight: lighter;
+    line-height: 1.5;
+    opacity: 0;
+    animation: drop 0.8s forwards;
+    display: none;
+  }
 }
 
 .info--opened {
@@ -155,6 +165,10 @@ body {
   }
 
   .info__title {
+    display: block;
+  }
+
+  .info__body {
     display: block;
   }
 }

@@ -1,3 +1,4 @@
+import content from "./content";
 import illustration from "./illustration";
 
 const menu = document.querySelector(".menu");
@@ -5,6 +6,7 @@ const menu = document.querySelector(".menu");
 menu.innerHTML = illustration();
 
 const info = document.querySelector(".info");
+const body = document.querySelector(".info__body");
 const title = document.querySelector(".info__title");
 const menuItems = document.querySelectorAll(".menu-item");
 const backButton = document.querySelector(".info__back-button");
@@ -19,7 +21,8 @@ const fullscreenchange = () => {
 };
 
 const setInfoContent = (index: number) => {
-  title.innerHTML = `${index}.`;
+  title.innerHTML = content[index].title;
+  body.innerHTML = content[index].html;
 };
 
 document.addEventListener("fullscreenchange", fullscreenchange);
