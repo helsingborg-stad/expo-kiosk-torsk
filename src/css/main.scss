@@ -57,12 +57,12 @@ body {
 }
 
 .menu--opened {
-  transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 1500ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transform: translateY(-100%);
 }
 
 .menu--closed {
-  transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 1500ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transform: translateY(0%);
 }
 
@@ -107,7 +107,7 @@ body {
   }
 }
 
-.info {
+.page {
   background: #0969b2;
   height: 100vh;
   text-align: center;
@@ -159,16 +159,16 @@ body {
   }
 }
 
-.info--opened {
-  .info__back-button {
+.page--opened {
+  .page__back-button {
     display: inline;
   }
 
-  .info__title {
+  .page__title {
     display: block;
   }
 
-  .info__body {
+  .page__body {
     display: block;
   }
 }

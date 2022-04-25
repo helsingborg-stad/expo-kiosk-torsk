@@ -1,57 +1,31 @@
+import { html, render } from "lit-html";
+import { FullscreenControl, Menu, Page } from "./components";
 import content from "./content";
-import illustration from "./illustration";
 
-const menu = document.querySelector(".menu");
+const TorskApp = () => {
+  let state = { page: undefined, language: "sv" };
 
-menu.innerHTML = illustration();
+  const menu = Menu();
+  const page = Page();
+  const fullscreenControl = FullscreenControl();
 
-const info = document.querySelector(".info");
-const body = document.querySelector(".info__body");
-const title = document.querySelector(".info__title");
-const menuItems = document.querySelectorAll(".menu-item");
-const backButton = document.querySelector(".info__back-button");
-const fullscreenButton = document.querySelector(".fullscreen-button");
-
-const fullscreenchange = () => {
-  if (document.fullscreenElement) {
-    fullscreenButton.classList.add("d-none");
-  } else {
-    fullscreenButton.classList.remove("d-none");
-  }
-};
-
-const setInfoContent = (index: number) => {
-  title.innerHTML = content[index].title;
-  body.innerHTML = content[index].html;
-};
-
-document.addEventListener("fullscreenchange", fullscreenchange);
-
-fullscreenButton.addEventListener("click", () => {
-  if (document.fullscreenElement) {
-    document.exitFullscreen();
-  } else {
-    document.documentElement.requestFullscreen();
-  }
-});
-
-menuItems.forEach((item) => {
-  item.addEventListener("click", (event) => {
-    setInfoContent(
-      Number(
-        (event.target as Element)
-          .closest(".menu-item")
-          .getAttribute("data-value")
-      )
-    );
-    menu.classList.remove("menu--opened");
-    menu.classList.add("menu--closed");
-    info.classList.add("info--opened");
+  menu.component.addEventListener("open", (event) => {
+    state.page = (event as CustomEvent).detail;
+    page.actions.open();
+    page.actions.set(content[state.page][state.language]);
   });
-});
 
-backButton.addEventListener("click", () => {
-  menu.classList.remove("menu--closed");
-  menu.classList.add("menu--opened");
-  info.classList.remove("info--opened");
+  page.component.addEventListener("close", () => {
+    menu.actions.open();
+  });
+
+  return html`
+    <div class="wrapper">
+      ${fullscreenControl.component} ${page.component} ${menu.component}
+    </div>
+  `;
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  render(TorskApp(), document.body);
 });
