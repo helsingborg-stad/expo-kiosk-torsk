@@ -3,6 +3,7 @@
 :root {
   --selected-color: hotpink;
   --breath-animation: breath 2s alternate infinite;
+  font-size: 1vw;
 }
 
 body {
@@ -20,11 +21,11 @@ body {
 
 @keyframes drop {
   from {
-    transform: translateY(-10em);
+    transform: translateY(-10rem);
     opacity: 0;
   }
   to {
-    transform: translateY(0em);
+    transform: translateY(0rem);
     opacity: 1;
   }
 }
@@ -50,7 +51,7 @@ body {
   height: 100vh;
   transform: translateY(-100%);
   display: flex;
-  box-shadow: -2px -43px 57px 5px rgb(0 0 0 / 20%);
+  box-shadow: 0rem 0rem 4rem 2rem rgb(0 0 0 / 20%);
   svg {
     width: 100%;
   }
@@ -115,7 +116,7 @@ body {
   &__header {
     display: flex;
     justify-content: space-between;
-    padding: 3vw;
+    padding: 3em;
     animation: drop 0.8s forwards;
     opacity: 0;
     display: none;
@@ -128,7 +129,7 @@ body {
     label {
       color: rgba(#fff, 60%);
       margin-left: 2em;
-      font-size: 1vw;
+      font-size: 1rem;
       padding-bottom: 0.1em;
       display: flex;
 
@@ -172,7 +173,7 @@ body {
   }
 
   &__back-button {
-    font-size: 0.8vw;
+    font-size: 0.8rem;
     margin-top: 3em;
     margin-bottom: 5em;
     background: #63bfc2;
@@ -189,7 +190,7 @@ body {
   &__title {
     text-align: left;
     color: white;
-    font-size: 4vw;
+    font-size: 4rem;
   }
 
   &__body {
@@ -202,18 +203,18 @@ body {
     display: none;
     flex-direction: column;
     align-items: center;
-    font-size: 0.8vw;
+    font-size: 0.8rem;
     margin: 0 auto;
     flex: 1;
 
     p {
-      max-width: 40vw;
+      max-width: 40em;
       align-self: flex-start;
     }
 
     img {
       margin-bottom: 2em;
-      max-width: 40vw;
+      max-width: 40em;
     }
   }
 }
