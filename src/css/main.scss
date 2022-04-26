@@ -195,7 +195,6 @@ body {
   &__body {
     color: white;
     text-align: left;
-    margin: auto;
     font-weight: lighter;
     line-height: 1.5;
     opacity: 0;
@@ -204,9 +203,12 @@ body {
     flex-direction: column;
     align-items: center;
     font-size: 0.8vw;
+    margin: 0 auto;
+    flex: 1;
 
     p {
       max-width: 40vw;
+      align-self: flex-start;
     }
 
     img {

@@ -19,7 +19,10 @@ export default {
   2: {
     sv: {
       title: `2.`,
-      html: `<p>När fisken tagits in till land storlekssorteras den. Den stora torsken går direkt till slakt. Torsken som är för liten och som annars skulle gå till fiskpinnar eller djurfoder skickas istället nästgårds till akvakulturföretaget Tysfjord Marine Farm. Där får den fortsätta sitt liv i stora öppna kassar ute i den djupa fjorden tills det är dags att hamna på din tallrik. Kassen är djup så torsken har gått om plats att röra sig. Till foder får de fiskrens ifrån sill och Lodda. Genom att odla upp vildfångad torsk från liten till stor så får man ett mycket bättre utnyttjande av protein.</p>`,
+      html: `
+        <img src="stor-torsk.jpeg" width="90%">
+        <p>När fisken tagits in till land storlekssorteras den. Den stora torsken går direkt till slakt. Torsken som är för liten och som annars skulle gå till fiskpinnar eller djurfoder skickas istället nästgårds till akvakulturföretaget Tysfjord Marine Farm. Där får den fortsätta sitt liv i stora öppna kassar ute i den djupa fjorden tills det är dags att hamna på din tallrik. Kassen är djup så torsken har gått om plats att röra sig. Till foder får de fiskrens ifrån sill och Lodda. Genom att odla upp vildfångad torsk från liten till stor så får man ett mycket bättre utnyttjande av protein.</p>
+      `,
       back: `Tillbaka`,
     },
     en: {
