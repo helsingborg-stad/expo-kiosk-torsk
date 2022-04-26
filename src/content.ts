@@ -18,7 +18,7 @@ export default {
   2: {
     sv: {
       title: `2.`,
-      html: `<p>Innehåll</p>`,
+      html: `<p>När fisken tagits in till land storlekssorteras den. Den stora torsken går direkt till slakt. Torsken som är för liten och som annars skulle gå till fiskpinnar eller djurfoder skickas istället nästgårds till akvakulturföretaget Tysfjord Marine Farm. Där får den fortsätta sitt liv i stora öppna kassar ute i den djupa fjorden tills det är dags att hamna på din tallrik. Kassen är djup så torsken har gått om plats att röra sig. Till foder får de fiskrens ifrån sill och Lodda. Genom att odla upp vildfångad torsk från liten till stor så får man ett mycket bättre utnyttjande av protein.</p>`,
       back: `Tillbaka`,
     },
     en: {
@@ -30,7 +30,10 @@ export default {
   3: {
     sv: {
       title: `3.`,
-      html: `<p>Innehåll</p>`,
+      html: `
+        <p>När torsken vuxit från 1 kilo till cirka 2-3 kilo är det dags att slaktas. Torsken slaktas för hand på plats ute vid kassen. På så sätt stressar man inte djuren i onödan. Direkt efter slakten går torsken till produktionsanläggningen Taste of North där den fileas, fryses och förpackas för hand.</p>
+        <p>98 % torsken tas tillvara. Fiskbenen torkas och mals ner till proteinpulver som kan användas i länder med hungersnöd. Lever och rom säljs som egna produkter eller går till produktion av näringsrik fiskolja.</p>
+      `,
       back: `Tillbaka`,
     },
     en: {
@@ -42,7 +45,7 @@ export default {
   4: {
     sv: {
       title: `4.`,
-      html: `<p>Innehåll</p>`,
+      html: `<p>Istället för att ta hela omvägen via Kina så sker all produktion av vår torsk i Nordnorge. Efter den har paketerats så skickas den med tåg till Sverige. Genom att undvika vägen via Kina så blir det en minskning av klimatpåverkan från transporten med över 90 %. Med på leveransen sitter en sensor som mäter vilken väg den paketerade torsken åker samt vilken frystemperatur den håller.</p>`,
       back: `Tillbaka`,
     },
     en: {
@@ -54,7 +57,12 @@ export default {
   5: {
     sv: {
       title: `5.`,
-      html: `<p>Innehåll</p>`,
+      html: `
+        <p>Under vintern 2021 och våren 2022 så har cirka 13 ton torsk levererats från Nordnorge in till stadens skolkök och vårdboenden. All information ligger lagrad i vår helt egna blockkedja.</p>
+        <p>Blockkedjeteknologi bygger på en decentraliserad digital databas. Det finns alltså inte ett centralt ställe där data lagras utan en massa kopior. Datan hämtas in med automatik ifrån producentens egna system eller från sensorer. Alla händelser lagras i sammanlänkande krypterade block. Om någon information i kedjan ändras eller tas bort måste det verifieras av alla parter i kedjan. På så sätt blir bedrägeri i stort sätt omöjligt.</p>
+        <p>Man kan enkelt säga att alla som är inblandade i att leverera torsken till Helsingborgs stad krokar arm och delar information. All information om vår ”Helsingborgs-torsk” samlas digitalt i en helt egen blockkedja. Genom projektet har vi fått koll på en mängd data som när fisken blev fångad, hur den blev fångad, vad den har ätit, hur länge den transporterades och en massa annan spännande fakta.</p>
+        <p>Vi kan nu vara helt säkra på att vi kan äta torsk med gott samvete!</p>
+        `,
       back: `Tillbaka`,
     },
     en: {
@@ -66,7 +74,7 @@ export default {
   6: {
     sv: {
       title: `6.`,
-      html: `<p>Innehåll</p>`,
+      html: `<p>Ingen text utan istället film på när torsken äts ute i våra kök.</p>`,
       back: `Tillbaka`,
     },
     en: {

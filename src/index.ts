@@ -14,7 +14,7 @@ const TorskApp = () => {
     page.actions.setContent(content[state.page][state.language]);
   });
 
-  menu.component.addEventListener("open", (event) => {
+  menu.component.addEventListener("navigation", (event) => {
     state.page = (event as CustomEvent).detail;
     page.actions.open();
     page.actions.setContent(content[state.page][state.language]);

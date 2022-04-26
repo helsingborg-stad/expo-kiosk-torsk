@@ -13,7 +13,7 @@ export const Menu = () => {
       component.classList.remove("menu--opened");
       component.classList.add("menu--closed");
       component.dispatchEvent(
-        new CustomEvent("open", {
+        new CustomEvent("navigation", {
           detail: Number(
             (event.target as Element)
               .closest(".menu-item")
