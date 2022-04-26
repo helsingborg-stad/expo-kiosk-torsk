@@ -22,6 +22,7 @@ const TorskApp = () => {
 
   page.component.addEventListener("close", () => {
     menu.actions.open();
+    page.actions.setContent({ title: "", back: "", html: "" });
   });
 
   return html`

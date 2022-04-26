@@ -75,7 +75,12 @@ export default {
   6: {
     sv: {
       title: `6.`,
-      html: `<p>Ingen text utan istället film på när torsken äts ute i våra kök.</p>`,
+      html: `
+      <video width="100%" controls>
+        <source src="sample.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      `,
       back: `Tillbaka`,
     },
     en: {
