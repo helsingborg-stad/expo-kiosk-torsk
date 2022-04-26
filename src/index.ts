@@ -53,6 +53,15 @@ const preloadImage = (src) =>
     image.src = src;
   });
 
+render(
+  html`<div
+    style="display:flex;justify-content:center;align-items:center;height:100vh;"
+  >
+    Loading content...
+  </div>`,
+  document.body
+);
+
 Promise.all([
   ...["cod.png", "stor-torsk.jpeg", "torsk.jpeg"].map((src) =>
     preloadImage(src)
