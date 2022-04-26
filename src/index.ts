@@ -3,9 +3,8 @@ import { FullscreenControl, Menu, Page } from "./components";
 import content from "./content";
 
 const TorskApp = (preloadedVideo) => {
-  const [key, val] = Object.entries(preloadedVideo)[0];
-
-  content[6].sv.html = content[6].sv.html.replace(key, val as string);
+  const [srcUrl, objectUrl] = preloadedVideo;
+  content[6].sv.html = content[6].sv.html.replace(srcUrl, objectUrl as string);
 
   const state = { page: undefined, language: "sv" };
 
@@ -40,9 +39,7 @@ const preloadVideo = (src) =>
   fetch(src)
     .then((response) => response.blob())
     .then((response) => {
-      return {
-        [src]: URL.createObjectURL(response),
-      };
+      return [src, URL.createObjectURL(response)];
     });
 
 const preloadImage = (src) =>
@@ -62,12 +59,13 @@ render(
   document.body
 );
 
+const videos = ["sample.mp4"];
+const images = ["cod.png", "stor-torsk.jpeg", "torsk.jpeg"];
+
 Promise.all([
-  ...["cod.png", "stor-torsk.jpeg", "torsk.jpeg"].map((src) =>
-    preloadImage(src)
-  ),
-  preloadVideo("sample.mp4"),
+  ...videos.map((src) => preloadVideo(src)),
+  ...images.map((src) => preloadImage(src)),
 ]).then((response) => {
-  const video = response[3];
+  const video = response[0];
   render(TorskApp(video), document.body);
 });
