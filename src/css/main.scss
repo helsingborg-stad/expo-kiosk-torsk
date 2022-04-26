@@ -201,9 +201,16 @@ body {
     opacity: 0;
     animation: drop 0.8s forwards;
     display: none;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8vw;
 
     p {
-      font-size: 0.8vw;
+      max-width: 40vw;
+    }
+
+    img {
+      margin-bottom: 2em;
       max-width: 40vw;
     }
   }
@@ -219,6 +226,6 @@ body {
   }
 
   .page__body {
-    display: block;
+    display: flex;
   }
 }

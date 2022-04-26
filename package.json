@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build --public-url '.' src/index.html"
+    "parcel:start": "parcel index.html",
+    "parcel:build": "parcel build --public-url '.' index.html",
+    "postbuild": "cp -r src/assets/* dist/",
+    "start": "npm run parcel:start && npm run postbuild",
+    "build": "npm run parcel:build && npm run postbuild"
   },
   "author": "",
   "license": "ISC",
