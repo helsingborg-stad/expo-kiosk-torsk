@@ -189,20 +189,23 @@ body {
   &__title {
     text-align: left;
     color: white;
-    font-size: 5vw;
+    font-size: 4vw;
   }
 
   &__body {
-    font-size: 1vw;
     color: white;
     text-align: left;
-    max-width: 40vw;
     margin: auto;
     font-weight: lighter;
     line-height: 1.5;
     opacity: 0;
     animation: drop 0.8s forwards;
     display: none;
+
+    p {
+      font-size: 0.8vw;
+      max-width: 40vw;
+    }
   }
 }
 
