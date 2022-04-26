@@ -24,7 +24,7 @@ export default {
     en: {
       title: `2.`,
       html: `<p>Content</p>`,
-      back: `Tillbaka`,
+      back: `Back`,
     },
   },
   3: {
@@ -36,7 +36,7 @@ export default {
     en: {
       title: `3.`,
       html: `<p>Content</p>`,
-      back: `Tillbaka`,
+      back: `Back`,
     },
   },
   4: {
@@ -48,7 +48,7 @@ export default {
     en: {
       title: `4.`,
       html: `<p>Content</p>`,
-      back: `Tillbaka`,
+      back: `Back`,
     },
   },
   5: {
@@ -60,7 +60,7 @@ export default {
     en: {
       title: `5.`,
       html: `<p>Content</p>`,
-      back: `Tillbaka`,
+      back: `Back`,
     },
   },
   6: {
@@ -72,7 +72,7 @@ export default {
     en: {
       title: `6.`,
       html: `<p>Content</p>`,
-      back: `Tillbaka`,
+      back: `Back`,
     },
   },
 };

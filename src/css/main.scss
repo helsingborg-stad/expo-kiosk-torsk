@@ -50,7 +50,7 @@ body {
   height: 100vh;
   transform: translateY(-100%);
   display: flex;
-  box-shadow: -2px -43px 57px 5px rgb(0 0 0 / 30%);
+  box-shadow: -2px -43px 57px 5px rgb(0 0 0 / 20%);
   svg {
     width: 100%;
   }
@@ -112,6 +112,57 @@ body {
   height: 100vh;
   text-align: center;
 
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw;
+    animation: drop 0.8s forwards;
+    opacity: 0;
+    display: none;
+  }
+
+  &__language-selector {
+    align-items: center;
+    display: flex;
+
+    label {
+      color: rgba(#fff, 60%);
+      margin-left: 2em;
+      font-size: 1vw;
+      padding-bottom: 0.1em;
+      display: flex;
+
+      &::before {
+        content: "";
+        width: 1em;
+        display: block;
+        margin-right: 0.5em;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+      }
+    }
+
+    label[for="sv"] {
+      &::before {
+        background-image: url("../assets/se.svg");
+      }
+    }
+
+    label[for="en"] {
+      &::before {
+        background-image: url("../assets/gb.svg");
+      }
+    }
+
+    input {
+      display: none;
+    }
+    input[type="radio"]:checked + label {
+      color: #fff;
+      border-bottom: 0.15em solid #fff;
+    }
+  }
+
   &__content {
     height: 100%;
     width: 100%;
@@ -121,6 +172,7 @@ body {
   }
 
   &__back-button {
+    font-size: 0.8vw;
     margin-top: 3em;
     margin-bottom: 5em;
     background: #63bfc2;
@@ -128,7 +180,6 @@ body {
     border-radius: 2em;
     border: none;
     color: white;
-    font-weight: bold;
     animation: drop 0.8s 0.2s forwards;
     opacity: 0;
     cursor: pointer;
@@ -139,14 +190,10 @@ body {
     text-align: left;
     color: white;
     font-size: 5vw;
-    padding: 0.5em;
-    opacity: 0;
-    animation: drop 0.8s forwards;
-    display: none;
   }
 
   &__body {
-    font-size: 1.1vw;
+    font-size: 1vw;
     color: white;
     text-align: left;
     max-width: 40vw;
@@ -164,8 +211,8 @@ body {
     display: inline;
   }
 
-  .page__title {
-    display: block;
+  .page__header {
+    display: flex;
   }
 
   .page__body {

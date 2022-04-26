@@ -6,13 +6,18 @@ const TorskApp = () => {
   let state = { page: undefined, language: "sv" };
 
   const menu = Menu();
-  const page = Page();
+  const page = Page(state);
   const fullscreenControl = FullscreenControl();
+
+  page.component.addEventListener("language", (event) => {
+    state.language = (event as CustomEvent).detail;
+    page.actions.setContent(content[state.page][state.language]);
+  });
 
   menu.component.addEventListener("open", (event) => {
     state.page = (event as CustomEvent).detail;
     page.actions.open();
-    page.actions.set(content[state.page][state.language]);
+    page.actions.setContent(content[state.page][state.language]);
   });
 
   page.component.addEventListener("close", () => {
