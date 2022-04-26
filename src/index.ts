@@ -7,7 +7,7 @@ const TorskApp = (preloadedVideo) => {
 
   content[6].sv.html = content[6].sv.html.replace(key, val as string);
 
-  let state = { page: undefined, language: "sv" };
+  const state = { page: undefined, language: "sv" };
 
   const menu = Menu();
   const page = Page(state);
