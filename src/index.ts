@@ -2,7 +2,11 @@ import { html, render } from "lit-html";
 import { FullscreenControl, Menu, Page } from "./components";
 import content from "./content";
 
-const TorskApp = () => {
+const TorskApp = (preloadedVideo) => {
+  const [key, val] = Object.entries(preloadedVideo)[0];
+
+  content[6].sv.html = content[6].sv.html.replace(key, val as string);
+
   let state = { page: undefined, language: "sv" };
 
   const menu = Menu();
@@ -32,6 +36,29 @@ const TorskApp = () => {
   `;
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  render(TorskApp(), document.body);
+const preloadVideo = (src) =>
+  fetch(src)
+    .then((response) => response.blob())
+    .then((response) => {
+      return {
+        [src]: URL.createObjectURL(response),
+      };
+    });
+
+const preloadImage = (src) =>
+  new Promise((r) => {
+    const image = new Image();
+    image.onload = r;
+    image.onerror = r;
+    image.src = src;
+  });
+
+Promise.all([
+  ...["cod.png", "stor-torsk.jpeg", "torsk.jpeg"].map((src) =>
+    preloadImage(src)
+  ),
+  preloadVideo("sample.mp4"),
+]).then((response) => {
+  const video = response[3];
+  render(TorskApp(video), document.body);
 });
