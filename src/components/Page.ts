@@ -3,23 +3,23 @@ import { element } from "../utils";
 export const Page = ({ language }) => {
   const component = element<HTMLElement>(`
     <div class="page">
-        <div class="page__content">
-            <div class="page__header">
-              <div class="page__title"></div>
-              <div class="page__language-selector ">
-                <input type="radio" id="sv" name="language" value="sv" />
-                <label for="sv">Svenska</label>
-                <input type="radio" id="en" name="language" value="en" />
-                <label for="en">English</label>
-              </div>
+      <div class="page__content">
+          <div class="page__header">
+            <div class="page__title"></div>
+            <div class="page__language-selector ">
+              <input type="radio" id="sv" name="language" value="sv" />
+              <label for="sv">Svenska</label>
+              <input type="radio" id="en" name="language" value="en" />
+              <label for="en">English</label>
             </div>
-            <div class="page__body"></div>
-            <div>
-                <button class="page__back-button"></button>
-            </div>
-        </div>
+          </div>
+          <div class="page__body"></div>
+          <div>
+              <button class="page__back-button"></button>
+          </div>
+      </div>
     </div>
-    `);
+  `);
 
   const titleElement = component.querySelector(".page__title");
   const bodyElement = component.querySelector(".page__body");

@@ -1,6 +1,7 @@
 import { html, render } from "lit-html";
 import { FullscreenControl, Menu, Page } from "./components";
 import content from "./content";
+import { preloadImage, preloadVideo } from "./utils";
 
 const TorskApp = (preloadedVideo) => {
   const [srcUrl, objectUrl] = preloadedVideo;
@@ -12,14 +13,14 @@ const TorskApp = (preloadedVideo) => {
   const page = Page(state);
   const fullscreenControl = FullscreenControl();
 
-  page.component.addEventListener("language", (event) => {
-    state.language = (event as CustomEvent).detail;
-    page.actions.setContent(content[state.page][state.language]);
-  });
-
   menu.component.addEventListener("navigation", (event) => {
     state.page = (event as CustomEvent).detail;
     page.actions.open();
+    page.actions.setContent(content[state.page][state.language]);
+  });
+
+  page.component.addEventListener("language", (event) => {
+    state.language = (event as CustomEvent).detail;
     page.actions.setContent(content[state.page][state.language]);
   });
 
@@ -35,29 +36,7 @@ const TorskApp = (preloadedVideo) => {
   `;
 };
 
-const preloadVideo = (src) =>
-  fetch(src)
-    .then((response) => response.blob())
-    .then((response) => {
-      return [src, URL.createObjectURL(response)];
-    });
-
-const preloadImage = (src) =>
-  new Promise((r) => {
-    const image = new Image();
-    image.onload = r;
-    image.onerror = r;
-    image.src = src;
-  });
-
-render(
-  html`<div
-    style="display:flex;justify-content:center;align-items:center;height:100vh;"
-  >
-    Loading content...
-  </div>`,
-  document.body
-);
+render(html`<div class="loader">Loading content...</div>`, document.body);
 
 const videos = ["sample.mp4"];
 const images = ["cod.png", "stor-torsk.jpeg", "torsk.jpeg"];
