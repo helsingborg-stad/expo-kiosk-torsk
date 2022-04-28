@@ -1,8 +1,7 @@
 import { flyg } from "flyg";
-import { FullscreenControl, Menu, Page } from "./components";
-import { Loader } from "./components/Loader";
-import content from "./content";
+import { FullscreenControl, Menu, Page, Loader } from "./components";
 import { preloadImage, preloadVideo } from "./utils";
+import content from "./content";
 
 const TorskApp = (preloadedVideo) => {
   const [srcUrl, objectUrl] = preloadedVideo;

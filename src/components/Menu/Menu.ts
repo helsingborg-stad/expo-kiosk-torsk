@@ -1,5 +1,5 @@
 import { flyg } from "flyg";
-import illustration from "../assets/illustration";
+import illustration from "../../assets/illustration";
 
 export const Menu = () => {
   const component = flyg<HTMLElement>`<div class="menu">${illustration()}</div>`;

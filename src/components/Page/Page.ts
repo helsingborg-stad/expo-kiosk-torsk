@@ -1,5 +1,5 @@
 import { flyg } from "flyg";
-import { LanguageControl } from "./LanguageControl";
+import { LanguageControl } from "..";
 
 export const Page = (state) => {
   const component = flyg<HTMLElement>`
