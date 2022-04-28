@@ -4,13 +4,13 @@ var n={};Object.defineProperty(n,"__esModule",{value:!0}),n.flyg=n.createElement
           <div class="page__header">
             <div class="page__title"></div>
             ${(e=>{const t=n.flyg`
-    <div class="page__language-selector ">
+    <div class="${e.class}">
         <input type="radio" id="sv" name="language" value="sv" />
         <label for="sv">Svenska</label>
         <input type="radio" id="en" name="language" value="en" />
         <label for="en">English</label>
     </div>
-  `,l=t.querySelectorAll("[name='language']");return l.forEach((n=>{n.checked=n.value===e})),l.forEach((n=>{n.addEventListener("change",(n=>{t.dispatchEvent(new CustomEvent("language",{detail:n.target.value,bubbles:!0}))}))})),{component:t}})(e.language).component}
+  `,l=t.querySelectorAll("[name='language']");return l.forEach((n=>{n.checked=n.value===e.language})),l.forEach((n=>{n.addEventListener("change",(n=>{t.dispatchEvent(new CustomEvent("language",{detail:n.target.value,bubbles:!0}))}))})),{component:t}})({language:e.language,class:"page__language-selector"}).component}
           </div>
           <div class="page__body"></div>
           <div>
@@ -23,4 +23,4 @@ var n={};Object.defineProperty(n,"__esModule",{value:!0}),n.flyg=n.createElement
       ${f.component} ${a.component} ${r.component}
     </div>
   `},o=n.flyg`<div class="loader">Loading content...</div>`;document.body.appendChild(o),Promise.all([...["sample.mp4"].map((n=>(n=>fetch(n).then((n=>n.blob())).then((e=>[n,URL.createObjectURL(e)])))(n))),...["cod.png","stor-torsk.jpeg","torsk.jpeg"].map((n=>(n=>new Promise((e=>{const t=new Image;t.onload=e,t.onerror=e,t.src=n})))(n)))]).then((n=>{const e=n[0];document.body.removeChild(o),document.body.appendChild(i(e))}));
-//# sourceMappingURL=index.135388f8.js.map
+//# sourceMappingURL=index.01b549e6.js.map
