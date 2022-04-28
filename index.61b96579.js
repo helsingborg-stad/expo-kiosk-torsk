@@ -22,5 +22,5 @@ var n={};Object.defineProperty(n,"__esModule",{value:!0}),n.flyg=n.createElement
     <div class="wrapper">
       ${f.component} ${a.component} ${r.component}
     </div>
-  `},o=n.flyg`<div class="loader">Loading content...</div>`;document.body.appendChild(o),Promise.all([...["sample.mp4"].map((n=>(n=>fetch(n).then((n=>n.blob())).then((e=>[n,URL.createObjectURL(e)])))(n))),...["cod.png","stor-torsk.jpeg","torsk.jpeg"].map((n=>(n=>new Promise((e=>{const t=new Image;t.onload=e,t.onerror=e,t.src=n})))(n)))]).then((n=>{const e=n[0];document.body.removeChild(o),document.body.appendChild(i(e))}));
-//# sourceMappingURL=index.63ec9cae.js.map
+  `},o={component:n.flyg`<div class="loader">Loading content...</div>`};document.body.appendChild(o.component),Promise.all([...["sample.mp4"].map((n=>(n=>fetch(n).then((n=>n.blob())).then((e=>[n,URL.createObjectURL(e)])))(n))),...["cod.png","stor-torsk.jpeg","torsk.jpeg"].map((n=>(n=>new Promise((e=>{const t=new Image;t.onload=e,t.onerror=e,t.src=n})))(n)))]).then((n=>{const e=n[0];document.body.removeChild(o.component),document.body.appendChild(i(e))}));
+//# sourceMappingURL=index.61b96579.js.map
