@@ -1,4 +1,4 @@
-import { html, render } from "lit-html";
+import { flyg } from "flyg";
 import { FullscreenControl, Menu, Page } from "./components";
 import content from "./content";
 import { preloadImage, preloadVideo } from "./utils";
@@ -29,22 +29,25 @@ const TorskApp = (preloadedVideo) => {
     page.actions.setContent({ title: "", back: "", html: "" });
   });
 
-  return html`
+  return flyg<HTMLElement>`
     <div class="wrapper">
       ${fullscreenControl.component} ${page.component} ${menu.component}
     </div>
   `;
 };
 
-render(html`<div class="loader">Loading content...</div>`, document.body);
-
 const videos = ["sample.mp4"];
 const images = ["cod.png", "stor-torsk.jpeg", "torsk.jpeg"];
+
+const Loader = flyg<HTMLElement>`<div class="loader">Loading content...</div>`;
+
+document.body.appendChild(Loader);
 
 Promise.all([
   ...videos.map((src) => preloadVideo(src)),
   ...images.map((src) => preloadImage(src)),
 ]).then((response) => {
   const video = response[0];
-  render(TorskApp(video), document.body);
+  document.body.removeChild(Loader);
+  document.body.appendChild(TorskApp(video));
 });

@@ -1,11 +1,8 @@
-import { element } from "../utils";
+import { flyg } from "flyg";
 import illustration from "../assets/illustration";
 
 export const Menu = () => {
-  const component = element<HTMLElement>(
-    `<div class="menu">${illustration()}</div>`
-  );
-
+  const component = flyg<HTMLElement>`<div class="menu">${illustration()}</div>`;
   const menuItems = component.querySelectorAll(".menu-item");
 
   menuItems.forEach((item) => {

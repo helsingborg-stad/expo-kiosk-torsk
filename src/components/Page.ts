@@ -1,7 +1,7 @@
-import { element } from "../utils";
+import { flyg } from "flyg";
 
 export const Page = ({ language }) => {
-  const component = element<HTMLElement>(`
+  const component = flyg<HTMLElement>`
     <div class="page">
       <div class="page__content">
           <div class="page__header">
@@ -19,7 +19,7 @@ export const Page = ({ language }) => {
           </div>
       </div>
     </div>
-  `);
+  `;
 
   const titleElement = component.querySelector(".page__title");
   const bodyElement = component.querySelector(".page__body");

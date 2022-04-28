@@ -12,10 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lit-html": "^2.2.2",
+    "flyg": "^0.0.4",
     "parcel": "^2.4.1"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.4.1"
+    "@parcel/transformer-sass": "^2.5.0"
   }
 }

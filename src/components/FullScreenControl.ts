@@ -1,9 +1,7 @@
-import { element } from "../utils";
+import { flyg } from "flyg";
 
 export const FullscreenControl = () => {
-  const component = element<HTMLButtonElement>(
-    `<button class="fullscreen-button">Fullscreen</button>`
-  );
+  const component = flyg<HTMLButtonElement>`<button class="fullscreen-button">Fullscreen</button>`;
 
   const fullscreenchange = () => {
     if (document.fullscreenElement) {
