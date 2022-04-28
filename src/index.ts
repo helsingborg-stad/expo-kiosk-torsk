@@ -1,5 +1,6 @@
 import { flyg } from "flyg";
 import { FullscreenControl, Menu, Page } from "./components";
+import { Loader } from "./components/Loader";
 import content from "./content";
 import { preloadImage, preloadVideo } from "./utils";
 
@@ -39,15 +40,14 @@ const TorskApp = (preloadedVideo) => {
 const videos = ["sample.mp4"];
 const images = ["cod.png", "stor-torsk.jpeg", "torsk.jpeg"];
 
-const Loader = flyg<HTMLElement>`<div class="loader">Loading content...</div>`;
-
-document.body.appendChild(Loader);
+const loader = Loader();
+document.body.appendChild(loader);
 
 Promise.all([
   ...videos.map((src) => preloadVideo(src)),
   ...images.map((src) => preloadImage(src)),
 ]).then((response) => {
   const video = response[0];
-  document.body.removeChild(Loader);
+  document.body.removeChild(loader);
   document.body.appendChild(TorskApp(video));
 });
