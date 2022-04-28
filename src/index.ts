@@ -40,13 +40,13 @@ const videos = ["sample.mp4"];
 const images = ["cod.png", "stor-torsk.jpeg", "torsk.jpeg"];
 
 const loader = Loader();
-document.body.appendChild(loader);
+document.body.appendChild(loader.component);
 
 Promise.all([
   ...videos.map((src) => preloadVideo(src)),
   ...images.map((src) => preloadImage(src)),
 ]).then((response) => {
   const video = response[0];
-  document.body.removeChild(loader);
+  document.body.removeChild(loader.component);
   document.body.appendChild(TorskApp(video));
 });

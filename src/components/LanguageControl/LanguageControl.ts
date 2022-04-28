@@ -10,14 +10,14 @@ export const LanguageControl = (props) => {
     </div>
   `;
 
-  const languageInputs =
+  const inputs =
     component.querySelectorAll<HTMLInputElement>("[name='language']");
 
-  languageInputs.forEach((radioButton) => {
+  inputs.forEach((radioButton) => {
     radioButton.checked = radioButton.value === props.language;
   });
 
-  languageInputs.forEach((radioButton) => {
+  inputs.forEach((radioButton) => {
     radioButton.addEventListener("change", (event) => {
       component.dispatchEvent(
         new CustomEvent("language", {
