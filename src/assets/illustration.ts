@@ -1,5 +1,7 @@
+import { flyg } from "flyg";
+
 export default () => {
-  return `
+  return flyg<SVGElement>`
     <svg
         id="Lager_1"
         data-name="Lager 1"

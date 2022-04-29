@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "flyg": "^0.0.5",
+    "flyg": "^0.0.7",
     "parcel": "^2.4.1"
   },
   "devDependencies": {
