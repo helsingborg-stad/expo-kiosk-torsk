@@ -79,7 +79,7 @@ export default {
     sv: {
       title: `6.`,
       html: `
-      <video width="100%" controls>
+      <video controls>
         <source src="sample.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
