@@ -37,7 +37,7 @@ const TorskApp = (preloadedVideo) => {
 };
 
 const videos = ["sample.mp4"];
-const images = ["cod.png", "stor-torsk.jpeg", "torsk.jpeg"];
+const images = ["cod.png", "stor-torsk.jpeg", "torsk.jpeg", "1.svg"];
 
 const loader = Loader();
 document.body.appendChild(loader.component);

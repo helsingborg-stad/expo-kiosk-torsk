@@ -35,10 +35,11 @@ export const Page = (state) => {
     open: () => {
       component.classList.add("page--opened");
     },
-    setContent: ({ title, html, back }) => {
+    setContent: ({ title, html, back, image }) => {
       titleElement.innerHTML = title;
       bodyElement.innerHTML = html;
       buttonElement.innerHTML = back;
+      component.style.backgroundImage = `url(${image})`;
     },
   };
 
