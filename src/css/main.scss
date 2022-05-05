@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 @import "reset";
 
 :root {
@@ -6,7 +8,10 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @keyframes breath {
@@ -182,22 +187,53 @@ body {
   }
 
   &__back-button {
+    margin: 0 4em;
     font-size: 0.8rem;
-    margin-top: 3em;
-    margin-bottom: 5em;
     background: #63bfc2;
     padding: 1em 2em;
     border-radius: 2em;
     border: none;
     color: white;
+    cursor: pointer;
+  }
+
+  &__nav-button {
+    background: none;
+    border: none;
+    height: 2.5em;
+    width: 2.5em;
+    color: steelblue;
+    cursor: pointer;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__nav-button--previous {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__nav-button--disabled {
+    opacity: 0;
+  }
+
+  &__footer {
     animation: drop 0.8s 0.2s forwards;
     opacity: 0;
-    cursor: pointer;
     display: none;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    align-items: center;
+    justify-content: center;
   }
 
   &__title {
     text-align: left;
+    font-weight: bold;
     color: white;
     font-size: 4rem;
   }
@@ -205,19 +241,19 @@ body {
   &__body {
     color: white;
     text-align: left;
-    font-weight: lighter;
     line-height: 1.5;
     opacity: 0;
     animation: drop 0.8s forwards;
     display: none;
     flex-direction: column;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin: 0 auto;
     flex: 1;
+    justify-content: center;
 
     p {
-      max-width: 40em;
+      max-width: 35em;
       align-self: flex-start;
     }
 
@@ -228,14 +264,14 @@ body {
 
     video {
       position: absolute;
-      width: 70em;
+      width: 60em;
     }
   }
 }
 
 .page--opened {
-  .page__back-button {
-    display: inline;
+  .page__footer {
+    display: flex;
   }
 
   .page__header {

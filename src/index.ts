@@ -13,20 +13,53 @@ const TorskApp = (preloadedVideo) => {
   const page = Page(state);
   const fullscreenControl = FullscreenControl();
 
+  const hasPreviousPage = () => state.page > 1;
+  const hasNextPage = () => state.page < Object.keys(content).length;
+
   menu.component.addEventListener("navigation", (event) => {
     state.page = (event as CustomEvent).detail;
     page.actions.open();
-    page.actions.setContent(content[state.page][state.language]);
+    page.actions.setContent(
+      content[state.page][state.language],
+      hasNextPage(),
+      hasPreviousPage()
+    );
   });
 
   page.component.addEventListener("language", (event) => {
     state.language = (event as CustomEvent).detail;
-    page.actions.setContent(content[state.page][state.language]);
+    page.actions.setContent(
+      content[state.page][state.language],
+      hasNextPage(),
+      hasPreviousPage()
+    );
   });
 
   page.component.addEventListener("close", () => {
     menu.actions.open();
-    page.actions.setContent({ title: "", back: "", html: "" });
+    page.actions.setContent({ title: "", back: "", html: "", image: "" });
+  });
+
+  page.component.addEventListener("next", () => {
+    if (hasNextPage()) {
+      state.page++;
+      page.actions.setContent(
+        content[state.page][state.language],
+        hasNextPage(),
+        hasPreviousPage()
+      );
+    }
+  });
+
+  page.component.addEventListener("previous", () => {
+    if (hasPreviousPage()) {
+      state.page--;
+      page.actions.setContent(
+        content[state.page][state.language],
+        hasNextPage(),
+        hasPreviousPage()
+      );
+    }
   });
 
   return flyg<HTMLElement>`
@@ -37,7 +70,7 @@ const TorskApp = (preloadedVideo) => {
 };
 
 const videos = ["sample.mp4"];
-const images = ["cod.png", "stor-torsk.jpeg", "torsk.jpeg", "1.svg"];
+const images = ["1.svg", "2.svg", "3.svg", "4.svg", "5.svg", "6.svg"];
 
 const loader = Loader();
 document.body.appendChild(loader.component);
