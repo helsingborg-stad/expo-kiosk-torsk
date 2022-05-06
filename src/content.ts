@@ -89,7 +89,7 @@ export default {
       image: `6.svg`,
       html: `
       <video controls>
-        <source src="sample.mp4" type="video/mp4">
+        <source src="torsk-svenska.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       `,
@@ -98,7 +98,12 @@ export default {
     en: {
       title: `6.`,
       image: `6.svg`,
-      html: `<p>Content</p>`,
+      html: `
+      <video controls>
+        <source src="torsk-engelska.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      `,
       back: `Back`,
     },
   },

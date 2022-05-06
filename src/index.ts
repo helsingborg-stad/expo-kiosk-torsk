@@ -3,9 +3,19 @@ import { FullscreenControl, Menu, Page, Loader } from "./components";
 import { preloadImage, preloadVideo } from "./utils";
 import content from "./content";
 
-const TorskApp = (preloadedVideo) => {
-  const [srcUrl, objectUrl] = preloadedVideo;
-  content[6].sv.html = content[6].sv.html.replace(srcUrl, objectUrl as string);
+const TorskApp = ({ map, torskSvenska, torskEngelska }) => {
+  const [torskSvenskaUrl, torskSvenskaObjectUrl] = torskSvenska;
+  const [torskEngelskaUrl, torskEngelskaObjectUrl] = torskEngelska;
+
+  content[6].sv.html = content[6].sv.html.replace(
+    torskSvenskaUrl,
+    torskSvenskaObjectUrl as string
+  );
+
+  content[6].en.html = content[6].en.html.replace(
+    torskEngelskaUrl,
+    torskEngelskaObjectUrl as string
+  );
 
   const state = { page: undefined, language: "sv" };
 
@@ -69,7 +79,7 @@ const TorskApp = (preloadedVideo) => {
   `;
 };
 
-const videos = ["sample.mp4"];
+const videos = ["map.mp4", "torsk-svenska.mp4", "torsk-engelska.mp4"];
 const images = ["1.svg", "2.svg", "3.svg", "4.svg", "5.svg", "6.svg"];
 
 const loader = Loader();
@@ -79,7 +89,12 @@ Promise.all([
   ...videos.map((src) => preloadVideo(src)),
   ...images.map((src) => preloadImage(src)),
 ]).then((response) => {
-  const video = response[0];
   document.body.removeChild(loader.component);
-  document.body.appendChild(TorskApp(video));
+  document.body.appendChild(
+    TorskApp({
+      map: response[0],
+      torskSvenska: response[1],
+      torskEngelska: response[2],
+    })
+  );
 });
