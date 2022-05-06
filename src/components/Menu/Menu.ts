@@ -1,8 +1,17 @@
 import { flyg } from "flyg";
 import illustration from "../../assets/illustration";
 
-export const Menu = () => {
-  const component = flyg<HTMLElement>`<div class="menu">${illustration()}</div>`;
+export const Menu = (video) => {
+  const component = flyg<HTMLElement>`
+    <div class="menu">
+      ${illustration()}
+      <video autoplay muted loop>
+        <source src="${video}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  `;
+
   const menuItems = component.querySelectorAll(".menu-item");
 
   menuItems.forEach((item) => {

@@ -19,7 +19,7 @@ const TorskApp = ({ map, torskSvenska, torskEngelska }) => {
 
   const state = { page: undefined, language: "sv" };
 
-  const menu = Menu();
+  const menu = Menu(map[1]);
   const page = Page(state);
   const fullscreenControl = FullscreenControl();
 
