@@ -260,10 +260,22 @@ body {
     margin: 0 auto;
     flex: 1;
     justify-content: center;
+    flex-direction: row;
+
+    div {
+      padding: 0 2em;
+    }
 
     p {
-      max-width: 35em;
+      max-width: 35rem;
       align-self: flex-start;
+    }
+
+    blockquote {
+      display: block;
+      max-width: 35rem;
+      font-size: 2rem;
+      font-weight: bold;
     }
 
     img {
