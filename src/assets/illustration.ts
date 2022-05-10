@@ -58,7 +58,6 @@ export default () => {
 	.st50{fill:none;stroke:#095F93;stroke-miterlimit:10;}
 	.st51{fill:#086096;}
 	.st52{fill:#5BA0D7;}
-	.st53{font-family:'MyriadPro-Regular';}
 	.st54{font-size:63.8477px;}
 	.st55{fill:none;stroke:#1D1E1C;stroke-width:0.5;stroke-miterlimit:10;}
 	.st56{fill:#53302C;}
@@ -109,29 +108,29 @@ export default () => {
 	.st101{fill:none;stroke:#0669B1;stroke-width:2;stroke-miterlimit:10;}
 </style>
 	<g class="menu-item" data-value="5">
-		<circle class="st4" cx="2247.4" cy="917.6" r="72.2"/>
-		<text transform="matrix(1 0 0 1 2231.8193 934.939)" class="st8 st53 st54">5</text>
+		<circle class="st4" cx="2244.4" cy="917.6" r="72.2"/>
+		<text transform="matrix(1 0 0 1 2225.8193 937.939)" class="st8 st53 st54">5</text>
 	</g>
 	
 	<g class="menu-item" data-value="6">
 		<circle class="st4" cx="2806.2" cy="1175.3" r="77"/>
-		<text transform="matrix(1 0 0 1 2789.5952 1193.8083)" class="st8 st53 st66">6</text>
+		<text transform="matrix(1 0 0 1 2786.5952 1196.8083)" class="st8 st53 st66">6</text>
 	</g>
 	<g class="menu-item" data-value="1">
 		<circle class="st4" cx="543.9" cy="1402.2" r="73.1"/>
-		<text transform="matrix(1 0 0 1 528.0991 1419.772)" class="st8 st53 st79">1</text>
+		<text transform="matrix(1 0 0 1 524.0991 1422.772)" class="st8 st53 st79">1</text>
 	</g>
 	<g class="menu-item" data-value="2">
 		<circle class="st4" cx="470.7" cy="1039.9" r="72.4"/>
-		<text transform="matrix(1 0 0 1 455.1215 1057.3354)" class="st8 st53 st80">2</text>
+		<text transform="matrix(1 0 0 1 452.1215 1060.3354)" class="st8 st53 st80">2</text>
 	</g>
     <g class="menu-item" data-value="3">
         <circle class="st4" cx="2053.2" cy="368.8" r="73.3"/>
-        <text transform="matrix(1 0 0 1 2037.3438 386.4346)" class="st8 st53 st83">3</text>
+        <text transform="matrix(1 0 0 1 2034.3438 389.4346)" class="st8 st53 st83">3</text>
     </g>
 	<g class="menu-item" data-value="4">
 		<circle class="st4" cx="2524.9" cy="318.2" r="66"/>
-		<text transform="matrix(1 0 0 1 2510.7024 334.1143)" class="st8 st53 st98">4</text>
+		<text transform="matrix(1 0 0 1 2507.7024 337.1143)" class="st8 st53 st98">4</text>
 	</g>
 </svg>
     `;

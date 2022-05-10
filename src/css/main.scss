@@ -16,11 +16,11 @@ body {
 
 @keyframes breath {
   from {
-    transform: scale(1);
+    transform: scale(0.9);
     color: #64bfc1;
   }
   to {
-    transform: scale(1.4);
+    transform: scale(1.2);
     color: #63cf97;
   }
 }
@@ -92,6 +92,7 @@ body {
 }
 
 .menu-item {
+  font-weight: bold;
   transition: ease-in-out;
   color: #64bfc1;
   animation: var(--breath-animation);
