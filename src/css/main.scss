@@ -265,23 +265,19 @@ body {
 
     div {
       padding: 0 2em;
+      width: 28rem;
     }
 
     p {
-      max-width: 35rem;
       align-self: flex-start;
     }
 
-    blockquote {
+    q {
       display: block;
-      max-width: 35rem;
       font-size: 2rem;
       font-weight: bold;
-    }
-
-    img {
-      margin-bottom: 2em;
-      max-width: 40em;
+      font-style: italic;
+      margin: 1em;
     }
 
     video {
