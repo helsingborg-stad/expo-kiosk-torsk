@@ -1,4 +1,4 @@
-bexport default {
+export default {
   1: {
     sv: {
       title: `1.`,
