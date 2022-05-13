@@ -10,7 +10,7 @@ export default {
           <p>Vi börjar resan på båten Nordhavet som fångat vårtorsk. Nordhavet är en mindre fiskebåt som tillhör kustflottan. Nordhavet använder sig av skonsamma fiskemetoder med ett redskap som heter snurrevad. Fisken dör inte i näten utan tas upp levande. Snurrevad förstör inte heller havsbotten till skillnad från de stora bottentrålarna som står för det mesta av industrifisket.</p>
         </div>
         <div>
-          <q>Klimatpåverkan minskar med mer än 90% genom att vi undviker transporten till och från Kina.</q>
+          <q>Välkomna att följa med på torskens resa!</q>
         </div>
       `,
       back: `Tillbaka till kartan`,
@@ -21,11 +21,12 @@ export default {
       html: `
         <div></div>
         <div>
-          <p>Content</p>
+          <p>Welcome to join the journey of the Norwegian codfish that starts far up in northern Norway and ends on our plates in Helsingborg!</p>
+          <p>We start the journey on the boat named North Sea that catches our fish. The North Sea is a small fishing boat that belongs to the coastal fleet and it uses gentle fishing methods. The fish does not die in the nets and therefor caught alive. The fishing method that the North Sea use does not destroy the seabed, unlike the large bottom trawls that stands for most of the industrial fishing.</p>
         </div>
-        <div></div>
+        <div>Welcome to join the journey of the cod!</div>
       `,
-      back: `Back`,
+      back: `Return to the map`,
     },
   },
   2: {
@@ -48,11 +49,12 @@ export default {
       html: `
         <div></div>
         <div>
-          <p>Content</p>
+          <p>The fish are brought ashore and then sorted by size. The large fish goes straight to slaughter. The fish that are too small and otherwise would go to fish fingers or animal feed goes to an aquaculture company where they can continue their lives in large aquacultures out in the deep fjord. For feed, they get fish remains from herring. By growing wild-caught codfish from small to large, you gain a much better utilization of biomass.</p>
+          <p>Animal welfare is an important issue. When the fish has grown in size, it is slaughtered by hand on site at the aquaculture, which means that the stress for the fish is minim al. If farm fish becomes stressed, it is in risks of dying. Immediately after slaughter, the fish goes to the processing plant where it is filleted, frozen and packaged.</p>
         </div>
         <div></div>
       `,
-      back: `Back`,
+      back: `Return to the map`,
     },
   },
   3: {
@@ -78,11 +80,15 @@ export default {
       html: `
         <div></div>
         <div>
-          <p>Content</p>
+          <p>Food fraud is a big problem! It is estimated that about 30% of all fish sold in the world are mislabeled. Of course, not all miss labelling is intentional. The participants in a food chain usually have different digital systems that do not talk to each other and a lot of information is registered manually, which increases the risk of errors.</p>
+          <p>All participants on our fish journey enter information digitally in a database called "blockchain" and for every event, a new block is created with data linked to the previous one. One block for the fishing boat - one for the aquaculture company - one for the processing factory - one for the transport and so on. The technology automatically retrieves the information from sensors and production systems. Once the information is inside the blockchain, it can´t be deleted or changed.</p>
+          <p>Our "Helsingborg codfish" is the first in the world to be tracked using digital blockchain technology.</p>
         </div>
-        <div></div>
+        <div>
+          <q>30% of all fish sold in the world are mislabeled.</q>
+        </div>
       `,
-      back: `Back`,
+      back: `Return to the map`,
     },
   },
   4: {
@@ -107,11 +113,12 @@ export default {
       html: `
         <div></div>
         <div>
-          <p>Content</p>
+          <p>A large part of the frozen codfish that we buy in Sweden are shipped by diesel-powered vessels to China to be filleted. It is a long and unnecessary journey with a major climate impact. The fact that fish are sent long distances to be processed to countries where labor is cheap is a big problem. Not only for the climate but also because it makes it more difficult for us to secure that fish we get delivered is according to our demands.</p>  
+          <p>After our fish is packed, it goes directly from Norway to Sweden by train. By avoiding the trip via China, the climate impact from transport is reduced by over 90%. The short supply chain also provides a fantastic quality that can be compared to fresh fish. The sensor that is included in the delivery measures which way the fish is going so that we can be sure that it is going directly from Norway to Sweden.</p>
         </div>
         <div></div>
       `,
-      back: `Back`,
+      back: `Return to the map`,
     },
   },
   5: {
@@ -126,7 +133,9 @@ export default {
           <p>När vi använder blockkedjeteknologi får vi koll på en mängd data som när fisken blev fångad, hur den blev fångad, vad den har ätit, hur den transporterades och en massa annan spännande fakta. </p>
           <p>Ute i matsalarna kan eleverna och de äldre på vårdboenden scanna en QR-kod och få reda på allt om torsken som ligger på tallriken. De tillfällen vi har serverat torsken har vi sett att barnen tar mer fisk och slänger mindre. Det tycker vi är jätteroligt!</p>
         </div>
-        <div></div>
+        <div>
+          <q>13 ton hållbar och spårad torsk har hittills serverats i Helsinborg.</q>
+        </div>
       `,
       back: `Tillbaka till kartan`,
     },
@@ -136,11 +145,17 @@ export default {
       html: `
         <div></div> 
         <div>
-          <p>Content</p>
+          <p>During the winter of 2021 and the spring of 2022, approximately 13 tons of codfish were shipped from northern Norway to Helsingborg directly by our regular food wholesaler. By doing so, we have avoided unnecessary transport.</p>
+          <p>The journey of the fish is complete when the fish are delivered to Helsingborg's schools and care homes.</p>
+          <p>When we use blockchain technology, we get a lot of data such as when the fish was caught, how it was caught, what it ate, how it was transported and a lot of other exciting facts.</p>
+          <p>Out in the schools and at the nursing homes they can scan a QR-code and find out everything about the fish that is served.</p>
+          <p>During the occasions where we have served the codfish, we have seen that the children eat more fish and throw less. We think that is great!</p>
         </div>
-        <div></div>
+        <div>
+          <q>13 tonnes of susatinable and tracked codfish has been served in Helsingborg so far.</q>
+        </div>
       `,
-      back: `Back`,
+      back: `Return to the map`,
     },
   },
   6: {
@@ -164,7 +179,7 @@ export default {
         Your browser does not support the video tag.
       </video>
       `,
-      back: `Back`,
+      back: `Return to the map`,
     },
   },
 };
