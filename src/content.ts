@@ -1,4 +1,4 @@
-export default {
+bexport default {
   1: {
     sv: {
       title: `1.`,
@@ -10,7 +10,7 @@ export default {
           <p>Vi börjar resan på båten Nordhavet som fångat vårtorsk. Nordhavet är en mindre fiskebåt som tillhör kustflottan. Nordhavet använder sig av skonsamma fiskemetoder med ett redskap som heter snurrevad. Fisken dör inte i näten utan tas upp levande. Snurrevad förstör inte heller havsbotten till skillnad från de stora bottentrålarna som står för det mesta av industrifisket.</p>
         </div>
         <div>
-          <q>Välkomna att följa med på torskens resa!</q>
+          <q>Torskens resa börjar i Nordnorge.</q>
         </div>
       `,
       back: `Tillbaka till kartan`,
@@ -24,7 +24,7 @@ export default {
           <p>Welcome to join the journey of the Norwegian codfish that starts far up in northern Norway and ends on our plates in Helsingborg!</p>
           <p>We start the journey on the boat named North Sea that catches our fish. The North Sea is a small fishing boat that belongs to the coastal fleet and it uses gentle fishing methods. The fish does not die in the nets and therefor caught alive. The fishing method that the North Sea use does not destroy the seabed, unlike the large bottom trawls that stands for most of the industrial fishing.</p>
         </div>
-        <div>Welcome to join the journey of the cod!</div>
+        <div>The journey of the cod begins in northern Norway.</div>
       `,
       back: `Return to the map`,
     },
@@ -152,7 +152,7 @@ export default {
           <p>During the occasions where we have served the codfish, we have seen that the children eat more fish and throw less. We think that is great!</p>
         </div>
         <div>
-          <q>13 tonnes of susatinable and tracked codfish has been served in Helsingborg so far.</q>
+          <q>13 tonnes of sustainable and tracked codfish have been served in Helsingborg so far.</q>
         </div>
       `,
       back: `Return to the map`,
