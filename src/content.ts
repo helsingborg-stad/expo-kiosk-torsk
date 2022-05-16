@@ -24,7 +24,9 @@ export default {
           <p>Welcome to join the journey of the Norwegian codfish that starts far up in northern Norway and ends on our plates in Helsingborg!</p>
           <p>We start the journey on the boat named North Sea that catches our fish. The North Sea is a small fishing boat that belongs to the coastal fleet and it uses gentle fishing methods. The fish does not die in the nets and therefor caught alive. The fishing method that the North Sea use does not destroy the seabed, unlike the large bottom trawls that stands for most of the industrial fishing.</p>
         </div>
-        <div>The journey of the cod begins in northern Norway.</div>
+        <div>
+          <q>The journey of the cod begins in northern Norway.</q>
+        </div>
       `,
       back: `Return to the map`,
     },
@@ -126,16 +128,16 @@ export default {
       title: `5.`,
       image: `5.svg`,
       html: `
-        <div></div>
+        <div>
+          <q>13 ton hållbar och spårad torsk har hittills serverats i Helsinborg.</q>
+        </div>
         <div>
           <p>Cirkeln sluts när fisken levereras till Helsingborgs skolor och vårdboenden, då är blockkedjan komplett.</p>
           <p>Under vintern 2021 och våren 2022 så har cirka 13 ton torsk levererats från Nordnorge in till Helsingborg av vår ordinarie livsmedelsgrossist. På så sätt har vi undvikit onödiga transporter.</p>
           <p>När vi använder blockkedjeteknologi får vi koll på en mängd data som när fisken blev fångad, hur den blev fångad, vad den har ätit, hur den transporterades och en massa annan spännande fakta. </p>
           <p>Ute i matsalarna kan eleverna och de äldre på vårdboenden scanna en QR-kod och få reda på allt om torsken som ligger på tallriken. De tillfällen vi har serverat torsken har vi sett att barnen tar mer fisk och slänger mindre. Det tycker vi är jätteroligt!</p>
         </div>
-        <div>
-          <q>13 ton hållbar och spårad torsk har hittills serverats i Helsinborg.</q>
-        </div>
+        <div></div>
       `,
       back: `Tillbaka till kartan`,
     },
@@ -143,7 +145,9 @@ export default {
       title: `5.`,
       image: `5.svg`,
       html: `
-        <div></div> 
+        <div>
+          <q>13 tonnes of sustainable and tracked codfish have been served in Helsingborg so far.</q>
+        </div> 
         <div>
           <p>During the winter of 2021 and the spring of 2022, approximately 13 tons of codfish were shipped from northern Norway to Helsingborg directly by our regular food wholesaler. By doing so, we have avoided unnecessary transport.</p>
           <p>The journey of the fish is complete when the fish are delivered to Helsingborg's schools and care homes.</p>
@@ -151,9 +155,7 @@ export default {
           <p>Out in the schools and at the nursing homes they can scan a QR-code and find out everything about the fish that is served.</p>
           <p>During the occasions where we have served the codfish, we have seen that the children eat more fish and throw less. We think that is great!</p>
         </div>
-        <div>
-          <q>13 tonnes of sustainable and tracked codfish have been served in Helsingborg so far.</q>
-        </div>
+        <div></div>
       `,
       back: `Return to the map`,
     },
