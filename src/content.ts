@@ -129,7 +129,7 @@ export default {
       image: `5.svg`,
       html: `
         <div>
-          <q>13 ton hållbar och spårad torsk har hittills serverats i Helsinborg.</q>
+          <q>13 ton hållbar och spårad torsk har hittills serverats i Helsingborg.</q>
         </div>
         <div>
           <p>Cirkeln sluts när fisken levereras till Helsingborgs skolor och vårdboenden, då är blockkedjan komplett.</p>
