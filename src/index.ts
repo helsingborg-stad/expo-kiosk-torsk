@@ -17,7 +17,7 @@ const TorskApp = ({ map, torskSvenska, torskEngelska }) => {
     torskEngelskaObjectUrl as string
   );
 
-  const state = { page: undefined, language: "sv" };
+  const state = { page: 1, language: "sv" };
 
   const menu = Menu(map[1]);
   const page = Page(state);
@@ -25,6 +25,14 @@ const TorskApp = ({ map, torskSvenska, torskEngelska }) => {
 
   const hasPreviousPage = () => state.page > 1;
   const hasNextPage = () => state.page < Object.keys(content).length;
+  const updateLanguage = () => {
+    menu.actions.setStartText(content.menu[state.language].text);
+    page.actions.setContent(
+      content[state.page][state.language],
+      hasNextPage(),
+      hasPreviousPage()
+    );
+  };
 
   menu.component.addEventListener("navigation", (event) => {
     state.page = (event as CustomEvent).detail;
@@ -38,11 +46,7 @@ const TorskApp = ({ map, torskSvenska, torskEngelska }) => {
 
   page.component.addEventListener("language", (event) => {
     state.language = (event as CustomEvent).detail;
-    page.actions.setContent(
-      content[state.page][state.language],
-      hasNextPage(),
-      hasPreviousPage()
-    );
+    updateLanguage();
   });
 
   page.component.addEventListener("close", () => {
@@ -71,6 +75,8 @@ const TorskApp = ({ map, torskSvenska, torskEngelska }) => {
       );
     }
   });
+
+  updateLanguage();
 
   return flyg<HTMLElement>`
     <div class="wrapper">

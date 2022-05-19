@@ -13,6 +13,7 @@ export const Menu = (video) => {
   `;
 
   const menuItems = component.querySelectorAll(".menu-item");
+  const startText = component.querySelector(".start");
 
   menuItems.forEach((item) => {
     item.addEventListener("click", (event) => {
@@ -34,6 +35,9 @@ export const Menu = (video) => {
     open: () => {
       component.classList.add("menu--opened");
       component.classList.remove("menu--closed");
+    },
+    setStartText: (text: string) => {
+      startText.innerHTML = text;
     },
   };
 

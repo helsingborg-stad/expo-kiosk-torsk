@@ -1,4 +1,12 @@
 export default {
+  menu: {
+    sv: {
+      text: "Börja här",
+    },
+    en: {
+      text: "Start here",
+    },
+  },
   1: {
     sv: {
       title: `1.`,
