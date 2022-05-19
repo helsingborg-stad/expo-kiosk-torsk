@@ -60,7 +60,7 @@ body {
 }
 
 .menu {
-  background: white;
+  background: #0969b2;
   height: 100vh;
   transform: translateY(-100%);
   display: flex;
@@ -144,49 +144,6 @@ body {
     animation: drop 0.8s forwards;
     opacity: 0;
     display: none;
-  }
-
-  &__language-selector {
-    align-items: center;
-    display: flex;
-
-    label {
-      color: rgba(#fff, 60%);
-      margin-left: 2em;
-      font-size: 1rem;
-      padding-bottom: 0.1em;
-      display: flex;
-      cursor: pointer;
-
-      &::before {
-        content: "";
-        width: 1em;
-        display: block;
-        margin-right: 0.5em;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-      }
-    }
-
-    label[for="sv"] {
-      &::before {
-        background-image: url("../assets/se.svg");
-      }
-    }
-
-    label[for="en"] {
-      &::before {
-        background-image: url("../assets/gb.svg");
-      }
-    }
-
-    input {
-      display: none;
-    }
-    input[type="radio"]:checked + label {
-      color: #fff;
-      border-bottom: 0.15em solid #fff;
-    }
   }
 
   &__content {
@@ -299,5 +256,59 @@ body {
 
   .page__body {
     display: flex;
+  }
+}
+
+.language-selector {
+  align-items: center;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: #0969b2;
+  //box-shadow: 0rem 0rem 1rem 1rem rgb(0 0 0 / 10%);
+  padding: 1em 2em;
+  border-top-left-radius: 0.5em;
+
+  label {
+    color: rgba(#fff, 60%);
+    font-size: 1rem;
+    padding-bottom: 0.1em;
+    display: flex;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      width: 1em;
+      display: block;
+      margin-right: 0.5em;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+
+    &:last-child {
+      margin-left: 2em;
+    }
+  }
+
+  label[for="sv"] {
+    &::before {
+      background-image: url("../assets/se.svg");
+    }
+  }
+
+  label[for="en"] {
+    &::before {
+      background-image: url("../assets/gb.svg");
+    }
+  }
+
+  input {
+    display: none;
+  }
+  input[type="radio"]:checked + label {
+    color: #fff;
+    border-bottom: 0.15em solid #fff;
   }
 }

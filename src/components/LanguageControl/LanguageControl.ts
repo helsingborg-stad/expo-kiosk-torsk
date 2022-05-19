@@ -1,8 +1,8 @@
 import { flyg } from "flyg";
 
-export const LanguageControl = (props) => {
+export const LanguageControl = ({ language }) => {
   const component = flyg<HTMLElement>`
-    <div class="${props.class}">
+    <div class="language-selector">
         <input type="radio" id="sv" name="language" value="sv" />
         <label for="sv">Svenska</label>
         <input type="radio" id="en" name="language" value="en" />
@@ -14,7 +14,7 @@ export const LanguageControl = (props) => {
     component.querySelectorAll<HTMLInputElement>("[name='language']");
 
   inputs.forEach((radioButton) => {
-    radioButton.checked = radioButton.value === props.language;
+    radioButton.checked = radioButton.value === language;
   });
 
   inputs.forEach((radioButton) => {

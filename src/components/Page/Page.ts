@@ -19,12 +19,6 @@ export const Page = (state) => {
       <div class="page__content">
           <div class="page__header">
             <div class="page__title"></div>
-            ${
-              LanguageControl({
-                language: state.language,
-                class: "page__language-selector",
-              }).component
-            }
           </div>
           <div class="page__body"></div>
           <div class="page__footer">

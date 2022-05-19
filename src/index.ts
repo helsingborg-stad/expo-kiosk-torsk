@@ -1,5 +1,11 @@
 import { flyg } from "flyg";
-import { FullscreenControl, Menu, Page, Loader } from "./components";
+import {
+  FullscreenControl,
+  Menu,
+  Page,
+  Loader,
+  LanguageControl,
+} from "./components";
 import { preloadImage, preloadVideo } from "./utils";
 import content from "./content";
 
@@ -7,12 +13,12 @@ const TorskApp = ({ map, torskSvenska, torskEngelska }) => {
   const [torskSvenskaUrl, torskSvenskaObjectUrl] = torskSvenska;
   const [torskEngelskaUrl, torskEngelskaObjectUrl] = torskEngelska;
 
-  content[6].sv.html = content[6].sv.html.replace(
+  content.pages[6].sv.html = content.pages[6].sv.html.replace(
     torskSvenskaUrl,
     torskSvenskaObjectUrl as string
   );
 
-  content[6].en.html = content[6].en.html.replace(
+  content.pages[6].en.html = content.pages[6].en.html.replace(
     torskEngelskaUrl,
     torskEngelskaObjectUrl as string
   );
@@ -22,13 +28,16 @@ const TorskApp = ({ map, torskSvenska, torskEngelska }) => {
   const menu = Menu(map[1]);
   const page = Page(state);
   const fullscreenControl = FullscreenControl();
+  const languageControl = LanguageControl({
+    language: state.language,
+  });
 
   const hasPreviousPage = () => state.page > 1;
-  const hasNextPage = () => state.page < Object.keys(content).length;
+  const hasNextPage = () => state.page < Object.keys(content.pages).length;
   const updateLanguage = () => {
     menu.actions.setStartText(content.menu[state.language].text);
     page.actions.setContent(
-      content[state.page][state.language],
+      content.pages[state.page][state.language],
       hasNextPage(),
       hasPreviousPage()
     );
@@ -38,13 +47,13 @@ const TorskApp = ({ map, torskSvenska, torskEngelska }) => {
     state.page = (event as CustomEvent).detail;
     page.actions.open();
     page.actions.setContent(
-      content[state.page][state.language],
+      content.pages[state.page][state.language],
       hasNextPage(),
       hasPreviousPage()
     );
   });
 
-  page.component.addEventListener("language", (event) => {
+  languageControl.component.addEventListener("language", (event) => {
     state.language = (event as CustomEvent).detail;
     updateLanguage();
   });
@@ -58,7 +67,7 @@ const TorskApp = ({ map, torskSvenska, torskEngelska }) => {
     if (hasNextPage()) {
       state.page++;
       page.actions.setContent(
-        content[state.page][state.language],
+        content.pages[state.page][state.language],
         hasNextPage(),
         hasPreviousPage()
       );
@@ -69,7 +78,7 @@ const TorskApp = ({ map, torskSvenska, torskEngelska }) => {
     if (hasPreviousPage()) {
       state.page--;
       page.actions.setContent(
-        content[state.page][state.language],
+        content.pages[state.page][state.language],
         hasNextPage(),
         hasPreviousPage()
       );
@@ -80,7 +89,10 @@ const TorskApp = ({ map, torskSvenska, torskEngelska }) => {
 
   return flyg<HTMLElement>`
     <div class="wrapper">
-      ${fullscreenControl.component} ${page.component} ${menu.component}
+      ${languageControl.component}
+      ${fullscreenControl.component}
+      ${page.component}
+      ${menu.component}
     </div>
   `;
 };
