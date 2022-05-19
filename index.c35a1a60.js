@@ -130,12 +130,12 @@ var t={};Object.defineProperty(t,"__esModule",{value:!0}),t.flyg=void 0;var e=fu
       <circle class="st4" cx="2524.9" cy="318.2" r="66"/>
       <text transform="matrix(1 0 0 1 2507.7024 337.1143)" class="st8 st53 st98">4</text>
     </g>
-    <g transform="translate(1175 650) scale(1.2)">
+    <g transform="translate(1070 780)">
       <g transform="translate(-516 729)">
         <path d="M13.8,20.9c4,27.4,3.4,58,46.6,56.3,41.6-1.6,84.9-.6,60.6,60.4" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="3"/>
         <path d="M0,28.7,8.6,0,29.1,21.8Z" fill="#fff"/>
       </g>
-      <text class="start" transform="translate(-455.612 902.543)" fill="#fff" font-size="28" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="-57.032" y="0"></tspan></text>
+      <text class="start" transform="translate(-470 920)" fill="#fff" font-size="45" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="-57.032" y="0"></tspan></text>
     </g>
   </svg>`}
       <video autoplay muted loop>
@@ -180,4 +180,4 @@ var t={};Object.defineProperty(t,"__esModule",{value:!0}),t.flyg=void 0;var e=fu
       ${p.component} ${h.component} ${m.component}
     </div>
   `},d={component:t.flyg`<div class="loader">Loading content...</div>`};document.body.appendChild(d.component),Promise.all([...["map.mp4","torsk-svenska.mp4","torsk-engelska.mp4"].map((t=>(t=>fetch(t).then((t=>t.blob())).then((e=>[t,URL.createObjectURL(e)])))(t))),...["1.svg","2.svg","3.svg","4.svg","5.svg","6.svg"].map((t=>(t=>new Promise((e=>{const s=new Image;s.onload=e,s.onerror=e,s.src=t})))(t)))]).then((t=>{document.body.removeChild(d.component),document.body.appendChild(l({map:t[0],torskSvenska:t[1],torskEngelska:t[2]}))}));
-//# sourceMappingURL=index.2afb8871.js.map
+//# sourceMappingURL=index.c35a1a60.js.map
