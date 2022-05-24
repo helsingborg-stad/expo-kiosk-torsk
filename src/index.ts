@@ -6,8 +6,10 @@ import {
   Loader,
   LanguageControl,
 } from "./components";
-import { preloadImage, preloadVideo } from "./utils";
+import { disableBrowserBack, preloadImage, preloadVideo } from "./utils";
 import content from "./content";
+
+disableBrowserBack();
 
 const TorskApp = ({ map, torskSvenska, torskEngelska }) => {
   const [torskSvenskaUrl, torskSvenskaObjectUrl] = torskSvenska;

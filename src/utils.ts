@@ -16,3 +16,10 @@ export const preloadImage = (src) =>
     image.onerror = response;
     image.src = src;
   });
+
+export const disableBrowserBack = () => {
+  history.pushState(null, document.title, location.href);
+  window.addEventListener("popstate", function (event) {
+    history.pushState(null, document.title, location.href);
+  });
+};
